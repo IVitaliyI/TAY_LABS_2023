@@ -1,16 +1,20 @@
+close all
+clear
+
 num = mod(6, 10) + 1;
 
+% ........ CONSTS ............
+
+a = 0;
+b = 1;
 
 
-syms x
-fun = sqrt(1 + x^2) + exp(-2 * x);
-dif_fun = diff(fun)
+% ....... END CONSTS .........
 
-lambda_func = @(x) fun;
-lambda_dif = @(x, t) diff_fun
+lambda_func = @(x) sqrt(1 + x^2) + exp(-2 * x);
+lambda_dif = @(x) x/(x^2 + 1)^(1/2) - 2*exp(-2*x);
 
-get
+lam
 
-plot_graph(lambda_func)
-gradient_spusk();
+plot_graph(lambda_func, lambda_dif, [a,b]);
 

@@ -33,7 +33,6 @@ function [] = plot_oscillator(t, z)
     grid on
     legend
 
-
     figure(Name='X(t) and V(t) plot')
     subplot(2,1,1)
     plot(t, z(:,1), DisplayName='x(t)')
