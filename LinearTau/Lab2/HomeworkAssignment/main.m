@@ -14,7 +14,5 @@ b = 1;
 lambda_func = @(x) sqrt(1 + x^2) + exp(-2 * x);
 lambda_dif = @(x) x/(x^2 + 1)^(1/2) - 2*exp(-2*x);
 
-
-
 plot_graph(lambda_func, lambda_dif, [a,b]);
 
