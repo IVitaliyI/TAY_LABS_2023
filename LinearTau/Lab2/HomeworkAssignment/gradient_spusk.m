@@ -1,2 +1,0 @@
-function [] = gradient_spusk()
-

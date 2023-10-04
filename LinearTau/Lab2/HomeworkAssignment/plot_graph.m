@@ -25,6 +25,9 @@ function [] = plot_graph(func, dif_func, otr)
    
     figure(Name='Gradient Function');
     plot(x, y);
+    grid on
+    xlabel('x')
+    ylabel('y')
     
     x_now = 0.1
     h = -a * dif_func(x_now);
@@ -37,7 +40,9 @@ function [] = plot_graph(func, dif_func, otr)
         h = -a * dif_func(x_now);
         x_next = x_now + h;
     end
-    disp([x_now, func(x_now)])
+    hold on
+    plot(x_now, func(x_now), 'o')
+  
 
 
 
