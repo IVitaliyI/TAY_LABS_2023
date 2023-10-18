@@ -19,7 +19,6 @@ function [] = sim_oscillator(m, alpha, k, x_0, v_0, t_simulation)
 %dzdt = @(t, z) [z(2,1); -k / m * z(1,1) - alpha / m * z(2,1)]; % функция, которую необходимо проинтегрировать (лямбда-выражение)
 z0 = [x_0, v_0]; % задание начального состояния
 t0 = 0; % задание начального времени
-zero_speed = @(t,z) event_zero_speed(t,z);
 
 
 [t, z] = ode45(@dzdt,[t0, t0 + t_simulation],z0); 
