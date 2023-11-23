@@ -1,0 +1,31 @@
+
+
+T = 8; % seconds; Maximum operating time
+R_pr = 90; % procents; Circle radius
+X = 0.1; % meters; X size field
+Y = 0.1; % meters; Y size field
+J_screw = 0.006; % kg*m^2; Screw ineetia 
+i = 12; % transfer ratio
+r = 0.002; %m screw radius
+m = 0.1; % rg; Pen mass
+
+J_gear = 0; % kg*m^2
+r = X * R_pr / 2;
+
+x0 = 0;
+y0 = 0;
+vy_0 = 0;
+vx_0 = 0;
+ax_0 = 0;
+ay_0 = 0;
+
+step_time = 0.1
+s = 0:step_time:1;
+
+polozhen = [r * cos(2 * pi * s ) - 4.5;  r * sin(2 * pi * s)]
+skor = diff(polozhen, 1, 2) ./ step_time
+acceleration = diff(skor, 1, 2) ./ step_
+
+
+
+
